@@ -1,16 +1,29 @@
 package com.cpw.vo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * 打印机
  * 
  * @author epeicen
  *
  */
+@Entity
+@Table(name = "printer")
 public class PrinterVO {
 
+	@Id
+	@GeneratedValue
 	private int printerId;
+	@Column
 	private String printerName;
+	@Column
 	private int speed;
+	@Column
 	private String status;
 
 	public int getPrinterId() {

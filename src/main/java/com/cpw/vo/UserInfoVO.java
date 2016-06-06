@@ -1,10 +1,10 @@
 package com.cpw.vo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Entity;
 
 /**
  * 用户信息表
@@ -12,7 +12,6 @@ import org.hibernate.annotations.Entity;
  * @author epeicen
  *
  */
-@SuppressWarnings("deprecation")
 @Entity
 @Table(name = "userinfo")
 public class UserInfoVO {
@@ -21,6 +20,7 @@ public class UserInfoVO {
 	@GeneratedValue
 	private int userId;
 	
+	@Column
 	private String userName;
 
 	public int getUserId() {

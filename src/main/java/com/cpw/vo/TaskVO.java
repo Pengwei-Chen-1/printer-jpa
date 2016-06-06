@@ -1,19 +1,36 @@
 package com.cpw.vo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * 任务实体
  * 
  * @author epeicen
  *
  */
+@Entity
+@Table(name = "task")
 public class TaskVO {
+	@Id
+	@GeneratedValue
 	private int taskId;
+	@Column
 	private int userId;
+	@Column
 	private int printerId;
+	@Column
 	private int totalNum;
+	@Column
 	private int lastNum;
+	@Column
 	private String status;
+	@Column
 	private int lastNumCount;
+	@Column
 	private String printerName;
 
 	public String getPrinterName() {
