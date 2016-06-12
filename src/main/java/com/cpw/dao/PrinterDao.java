@@ -18,7 +18,7 @@ public class PrinterDao {
 
 	@Transactional
 	public List<PrinterVO> queryAll() {
-		List<PrinterVO> list = em.createQuery("SELECT p FROM printer p", PrinterVO.class).getResultList();
+		List<PrinterVO> list = em.createQuery("SELECT p FROM PrinterVO p", PrinterVO.class).getResultList();
 		return list;
 	}
 

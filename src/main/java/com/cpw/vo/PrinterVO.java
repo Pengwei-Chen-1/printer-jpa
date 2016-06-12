@@ -18,12 +18,13 @@ public class PrinterVO {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "PRINTERID")
 	private int printerId;
-	@Column
+	@Column(name = "PRINTERNAME")
 	private String printerName;
-	@Column
+	@Column(name = "PRINTERSPEED")
 	private int speed;
-	@Column
+	@Column(name = "STATUS")
 	private String status;
 
 	public int getPrinterId() {

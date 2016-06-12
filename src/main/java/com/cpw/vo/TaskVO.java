@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * 任务实体
@@ -17,20 +18,21 @@ import javax.persistence.Table;
 public class TaskVO {
 	@Id
 	@GeneratedValue
+	@Column(name = "TASKID")
 	private int taskId;
-	@Column
+	@Column(name = "USERID")
 	private int userId;
-	@Column
+	@Column(name = "PRINTERID")
 	private int printerId;
-	@Column
+	@Column(name = "TOTALNUM")
 	private int totalNum;
-	@Column
+	@Column(name = "LASTNUM")
 	private int lastNum;
-	@Column
+	@Column(name = "STATUS")
 	private String status;
-	@Column
+	@Transient
 	private int lastNumCount;
-	@Column
+	@Transient
 	private String printerName;
 
 	public String getPrinterName() {

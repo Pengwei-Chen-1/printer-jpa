@@ -18,9 +18,10 @@ public class UserInfoVO {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "USERID")
 	private int userId;
-	
-	@Column
+
+	@Column(name = "USERNAME")
 	private String userName;
 
 	public int getUserId() {
